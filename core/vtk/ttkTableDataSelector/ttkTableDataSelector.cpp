@@ -75,7 +75,7 @@ int ttkTableDataSelector::RequestData(vtkInformation *request,
       continue;
     }
     // check bounds in the range
-    ptrdiff_t pos = find(AvailableCols.begin(), AvailableCols.end(), col)
+    std::ptrdiff_t pos = find(AvailableCols.begin(), AvailableCols.end(), col)
                     - AvailableCols.begin();
     if(pos < RangeId[0] || pos > RangeId[1]) {
       continue;
